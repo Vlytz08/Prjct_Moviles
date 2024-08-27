@@ -1,0 +1,7 @@
+{
+  "name": "ProyectoAppMakakoVirus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
