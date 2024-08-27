@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Test APP </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+  <ion-input labelPlacement="stacked" label="Email" placeholder="Ejemplo@correo.com">
+    <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+    <ion-button fill="clear" slot="end" aria-label="Show/hide">   
+    </ion-button>
+  </ion-input>
+  <ion-input labelPlacement="stacked" label="Contraseña" placeholder="1234">
+    <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+    <ion-button fill="clear" slot="end" aria-label="Show/hide">   
+    <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+    </ion-button>
+    </ion-input>
+    <ion-button shape="round">Iniciar Sesion</ion-button>
+    <a href="">Registrarse</a>
+    
+    <a href="">Olvidaste la contraseña?</a>
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> Test app </ion-title>
+  </ion-toolbar>
+</ion-footer>
