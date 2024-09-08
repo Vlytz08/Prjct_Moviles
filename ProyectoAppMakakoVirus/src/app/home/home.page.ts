@@ -23,4 +23,7 @@ export class HomePage {
     
     }
   }
+  navegar(){
+    this.router.navigate(['./inicio'])
+  }
 }
