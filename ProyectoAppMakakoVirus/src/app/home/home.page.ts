@@ -9,7 +9,7 @@ import { eye, lockClosed } from 'ionicons/icons';
 })
 export class HomePage {
   icono="switch-oscuro"
-  constructor() {
+  constructor(private router: Router) {
     addIcons({ eye, lockClosed })
   }
   cambiarTema(){
