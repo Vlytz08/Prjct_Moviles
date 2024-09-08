@@ -5,13 +5,16 @@
 </ion-header>
 <ion-content [fullscreen]="true">
   <div class="contenedor">
+  <div class="ALO">
+  <ion-icon src="/assets/logo.svg"></ion-icon>
   <h1>Bienvenidos a RegistraAPP</h1>
+  </div>
   <div class="NOSEXD">
-  <ion-button shape="round">Ingreso</ion-button>
-  <ion-button shape="round">Escanear QR.</ion-button>
-  <ion-button shape="round">Desplegar camara</ion-button>
+  <ion-button shape="round" click="navegar()">Ingreso</ion-button>
+  <ion-button shape="round" click="navegar()">Escanear QR.</ion-button>
+  <ion-button shape="round" click="navegar()">Desplegar camara</ion-button>
   
-  <ion-button [routerLink]="['/admin']">Go to admin</ion-button>x
+  <ion-button [routerLink]="['/admin']">Go to admin</ion-button>
 </div>
 </div>
 </ion-content>
