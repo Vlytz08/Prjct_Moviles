@@ -1,11 +1,9 @@
 .contenedor{
     background-color: var(--fondo);
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     row-gap: 50px;
     min-height: 10vh;
 }
@@ -15,30 +13,12 @@
     }
 
 
-.NOSEXD{
-    background-color: var(--fondo);
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.ALO{
-    background-color: var(--fondo);
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-
-}
-
 ion-button{
     width: 20%;
-    height: 1.5rem;
-    border-radius:1.25rem;
+    height: 2.5rem;
+    border-radius:1rem;
     text-align: center;
     font-size: 1.1rem;
-}
-h1{
-    width: 50%;
 }
 
 #tema{
