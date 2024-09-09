@@ -1,3 +1,14 @@
+.contenedor{
+  background-color: var(--fondo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  min-height: 100vh;
+}
+
+
 #tema{
     color: var(--icono-tema);
     position: absolute;
