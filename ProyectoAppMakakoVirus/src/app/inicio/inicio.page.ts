@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 import { AnimationController } from '@ionic/angular';
 
 
@@ -27,16 +27,18 @@ export class InicioPage implements OnInit {
     }
   }
   animarBoton() {
+      const inputElemet = document.querySelectorAll('button')
+
     this.anim
       .create()
-      .addElement(document.querySelector('#boton')!)
-       .duration(1000) // Duración del parpadeo en milisegundos
+      .addElement(inputElemet)
+      .duration(1000) // Duración del parpadeo en milisegundos
       .iterations(Infinity) // Repetir infinitamente
       .easing('linear') // Efecto de interpolación lineal
       .keyframes([
-        { offset: 0, opacity: 1 },      // Totalmente visible
-        { offset: 0.5, opacity: .8},    // Totalmente invisible 
-        { offset: 0.5, opacity: .6},    // Totalmente invisible 
+        { offset: 0, opacity: 1 },      
+        { offset: 0.5, opacity: .8},     
+        { offset: 0.5, opacity: .55},    // Totalmente invisible 
         { offset: 0.5, opacity: .8},    // Totalmente invisible 
         { offset: 1, opacity: 1 }       // Vuelve a ser visible
       ])
