@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AnimationController } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { eye, lockClosed } from 'ionicons/icons';
 
@@ -10,8 +11,11 @@ import { eye, lockClosed } from 'ionicons/icons';
 })
 export class HomePage {
   icono="switch-oscuro"
-  constructor(private router: Router) {
+  constructor(private router: Router, private anim: AnimationController) {
     addIcons({ eye, lockClosed })
+  }
+  ngOnInit(){
+    this.animarLogo();
   }
   cambiarTema(){
     if(this.icono == "switch-oscuro"){
@@ -26,4 +30,20 @@ export class HomePage {
   navegar(){
     this.router.navigate(['./inicio'])
   }
+  animarLogo(){
+    this.anim
+      .create()
+      .addElement(document.querySelector('#logo')!)
+      .duration(500)
+      .iterations(Infinity)
+      .direction('alternate')
+      .easing('ease-in-out')
+      .keyframes([
+        { offset: 0, transform: 'scale(1) rotate(8deg) translateX(10px)' },
+        { offset: 0.5, transform: 'scale(1) rotate(0deg)' },
+        { offset: 1, transform: 'scale(1) rotate(-8deg) translateX(-10px) ' },
+      ])
+      .play();
+  }
+  
 }
