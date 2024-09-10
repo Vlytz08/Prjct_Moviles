@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-inicio',
@@ -8,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class InicioPage implements OnInit {
   icono="switch-oscuro"
 
-  constructor() { }
+  constructor( private anim: AnimationController) { }
 
   ngOnInit() {
+    this.animarBoton();
+
   }
   cambiarTema(){
     if(this.icono == "switch-oscuro"){
@@ -22,4 +26,20 @@ export class InicioPage implements OnInit {
     
     }
   }
+  animarBoton() {
+    this.anim
+      .create()
+      .addElement(document.querySelector('#boton')!)
+       .duration(1000) // Duración del parpadeo en milisegundos
+      .iterations(Infinity) // Repetir infinitamente
+      .easing('linear') // Efecto de interpolación lineal
+      .keyframes([
+        { offset: 0, opacity: 1 },      // Totalmente visible
+        { offset: 0.5, opacity: .8},    // Totalmente invisible 
+        { offset: 0.5, opacity: .6},    // Totalmente invisible 
+        { offset: 0.5, opacity: .8},    // Totalmente invisible 
+        { offset: 1, opacity: 1 }       // Vuelve a ser visible
+      ])
+      .play();  
+}
 }
