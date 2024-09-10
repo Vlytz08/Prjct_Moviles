@@ -1,11 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
-    <ion-title>escanearQR</ion-title>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
- <div class="contenedor">
-  <a href="https://imgflip.com/i/92tlf3"><img src="https://i.imgflip.com/92tlf3.jpg" title="made at imgflip.com"/></a><div><a href="https://imgflip.com/memegenerator"></a></div>
- <ion-button (click)="navegar()" shape="round">volver</ion-button> 
+  <div class="separador">
+    <a [routerLink]="['/inicio']"><ion-icon src="/assets/volver.svg" > </ion-icon> </a>
+    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
   </div>
+
+ <div class="contenedor">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Commons_QR_code.png" alt="">
+  <div class="claseInfo">
+    <h6>Programacion Aplicaciones moviles</h6>
+    <p> Seccion 001D 01:10 - 02:50</p>
+  </div>  
+</div>
 </ion-content>

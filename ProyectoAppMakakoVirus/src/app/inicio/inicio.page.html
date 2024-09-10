@@ -1,13 +1,11 @@
-<ion-header [translucent]="true">
-    <ion-title>Bienvenidos a MakakoAPP </ion-title> 
-    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
-  </ion-header>
+
 <ion-content [fullscreen]="true">
+<ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
   <div class="contenedor">
   <ion-icon src="/assets/logo.svg"></ion-icon>
-  <h1>Bienvenidos a MakakoAPP</h1>
-  <ion-button [routerLink]="['/home']" shape="round">Registrarse</ion-button>
-  <ion-button [routerLink]="['/escanear-qr']" shape="round">Escanear QR.</ion-button>
-  <ion-button [routerLink]="['/admin']" shape="round">Admin</ion-button>
+  <h2>Bienvenidos a MakakoAPP</h2>
+  <button [routerLink]="['/escanear-qr']" shape="round">Generar QR.</button>
+  <button [routerLink]="['/admin']" shape="round">Profesor</button>
+  <button [routerLink]="['/home']" shape="round">Cerrar sesion.</button>
   </div>
 </ion-content>

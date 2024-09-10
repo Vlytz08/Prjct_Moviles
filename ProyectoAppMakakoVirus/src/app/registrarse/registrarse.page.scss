@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     row-gap: 15px;
-    min-height: 100vh;
+    min-height: 92vh;
     ion-icon{
       font-size: 8rem;
       color: var(--icono);
     }
-}
+
 input,button{
     width: 90%;
     height: 2.5rem;
@@ -25,11 +25,22 @@ input{
     background-color: var(--fondo-input);
     color: black;
 }
+button{
+  background-color: var(--icono);
+}
+}
 
-#tema{
+.separador {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--fondo);
+
+  ion-icon {
+    padding: 20px 20px 0 20px;
+  }
+}
+#tema, ion-icon{
   color: var(--icono-tema);
-  position: absolute;
-  right: 20px;
-  top: 20px;
+  
   font-size: 1.8rem;
 }

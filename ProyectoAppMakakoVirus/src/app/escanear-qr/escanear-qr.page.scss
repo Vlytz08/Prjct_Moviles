@@ -7,15 +7,21 @@
   justify-content: center;
   align-items: center;
   row-gap: 15px;
-  min-height: 100vh;
+  min-height: 92vh;
 }
+.separador {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--fondo);
 
+  ion-icon {
+    padding: 20px 20px 0 20px;
+  }
+}
+.claseInfo{text-align: center;}
 //estilo tema icono
-#tema{
+#tema, ion-icon{
     color: var(--icono-tema);
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   

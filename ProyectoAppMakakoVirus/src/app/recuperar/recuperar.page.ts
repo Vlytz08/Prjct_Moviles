@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
   templateUrl: './recuperar.page.html',
   styleUrls: ['./recuperar.page.scss'],
 })
+
+
 export class RecuperarPage implements OnInit {
   icono="switch-oscuro"
 
@@ -26,4 +28,7 @@ export class RecuperarPage implements OnInit {
   navegar(){
     this.router.navigate(['/inicio'])
   }
+
+
+  
 }

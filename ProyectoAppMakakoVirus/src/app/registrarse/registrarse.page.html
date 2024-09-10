@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
-    <ion-title>registrarse</ion-title>
-    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
+  <div class="separador">
+    <a [routerLink]="['/home']"><ion-icon src="/assets/volver.svg" > </ion-icon> </a>
+    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
+  </div>
   <div class="contenedor">
-  <h1>Registrarse</h1>
+  <h2>Registrarse</h2>
   <input type="text" placeholder="Nombre">
   <input type="text" placeholder="Apellido">
   <input type="text" placeholder="Correo">
   <input type="text" placeholder="Nombre de Usuario">
   <input type="password" placeholder="Contraseña">
   <input type="password" placeholder="Repetir Contraseña">
-  <ion-button (click)="navegar()">Registrar</ion-button>
+  <button (click)="navegar()">Registrar</button>
 </div>
 </ion-content>

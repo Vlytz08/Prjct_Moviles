@@ -1,13 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-title>MakakoAPP</ion-title>
-  <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
+  <div class="separador">
+    <a [routerLink]="['/inicio']"><ion-icon src="/assets/volver.svg" > </ion-icon> </a>
+    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
+  </div>
   <div class="contenedor">
-  <ion-icon src="/assets/logo.svg"></ion-icon>
-  <div class="textoredundante"></div>
-  <h1>Estamos trabajando en su proceso, porfavor espere!!</h1>
-  <ion-button (click)="navegar()">Volver</ion-button>
+    <ion-icon src="/assets/user.svg"></ion-icon>
+
+    <div class="infoProfe">
+      <H6>Fernando Sepulveda</H6>
+      <p>Profesor Programacion Web <br> Prefesor Programacion Aplicaciones moviles </p>
+    </div>
+    <button [routerLink]="['/escanear-qr']" >Iniciar clase.</button>
+
   </div>
 </ion-content>
